@@ -1,6 +1,15 @@
 # homelab
 resources and configuration
 
+Dell R720 8 x 3.5"
+- iDRAC 7 Enterprise
+- Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHz (4 core)
+- 128GB DDR3 RAM (24 DIMM slots)
+- PERC H710 Mini Raid controller
+- 2 x Dell 750W PSU
+- 4 x Dell 450 GB, 2 x Dell 600 GB SAS HDD
+- Broadcom Gigabit Ethernet BCM5720
+
 ## General updates
 [Tutorials to Update a PowerEdge](https://www.dell.com/support/article/us/en/04/sln300662/how-to-dell-server---tutorials-to-update-a-poweredge?lang=en)
 
