@@ -1,2 +1,26 @@
 # homelab
 resources and configuration
+
+## General updates
+[Tutorials to Update a PowerEdge](https://www.dell.com/support/article/us/en/04/sln300662/how-to-dell-server---tutorials-to-update-a-poweredge?lang=en)
+
+[Bootable iso update](https://dell.app.box.com/v/BootableR720) - use idrac or lifecycle controller. idrac requires exe from support.dell.com.
+
+Updating through lifecycle controller with f10 on startup. FTP server -> ftp.dell.com. Grabs all firmware updates.
+
+## iDrac 7 Enterprise
+[Updating Firmware through the iDRAC](https://www.dell.com/support/article/us/en/04/sln292363/poweredge-server--updating-firmware-through-the-idrac?lang=en)
+
+[Updating DRAC Firmware wiki](http://en.community.dell.com/techcenter/systems-management/w/wiki/3206.updating-drac-firmware)
+
+[Releases page](http://en.community.dell.com/techcenter/systems-management/w/wiki/12334.idrac8-home#releases)
+
+## Embedded System Diagnostics
+[Running The Embedded System Diagnostics](http://www.dell.com/support/manuals/us/en/19/poweredge-r720/720720xdom-v3/running-the-embedded-system-diagnostics?guid=guid-e44e5046-b06a-4e5e-870c-68cc3e129ddd&lang=en-us)
+
+[PSA/ePSA Diagnostics error codes](http://www.dell.com/support/manuals/us/en/19/poweredge-vrtx/servers_tsg/psaepsa-diagnostics-error-codes?guid=guid-9afeed67-a47c-4afd-83d8-04301ebf3523&lang=en-us)
+
+## VmWare
+[ESXi flash media install](http://www.dell.com/support/manuals/us/en/19/vmware-esxi-6.x/esxiiigpub-v1/installing-esxi-on-flash-media?guid=guid-744e0c3c-3659-42ba-b495-43facc9984d4&lang=en-us)
+
+[Dell-customized ESXi Embedded ISO image](http://www.dell.com/support/article/us/en/04/sln288152/how-to-download-the-dell-customized-esxi-embedded-iso-image?lang=en)
