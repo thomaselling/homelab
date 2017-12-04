@@ -1,5 +1,11 @@
-# homelab
-resources and configuration
+# homelab - scripts
+
+## deploy.ps1
+```powershell
+Test-Connection -Server testserver -Username testuser -Password testpass
+```
+
+# homelab - resources and configuration
 
 Dell R720 8 x 3.5"
 - iDRAC 7 Enterprise
