@@ -10,6 +10,9 @@ Dell R720 8 x 3.5"
 - 4 x Dell 450 GB, 2 x Dell 600 GB SAS HDD
 - Broadcom Gigabit Ethernet BCM5720
 
+## General setup
+[How to initialize and create a Virtual Disk (VD) with a PowerEdge RAID Controller (PERC)](https://www.dell.com/support/article/us/en/04/sln132532/how-to-initialize-and-create-a-virtual-disk--vd--with-a-poweredge-raid-controller--perc-?lang=en)
+
 ## General updates
 [Tutorials to Update a PowerEdge](https://www.dell.com/support/article/us/en/04/sln300662/how-to-dell-server---tutorials-to-update-a-poweredge?lang=en)
 
@@ -33,3 +36,7 @@ Updating through lifecycle controller with f10 on startup. FTP server -> ftp.del
 [ESXi flash media install](http://www.dell.com/support/manuals/us/en/19/vmware-esxi-6.x/esxiiigpub-v1/installing-esxi-on-flash-media?guid=guid-744e0c3c-3659-42ba-b495-43facc9984d4&lang=en-us)
 
 [Dell-customized ESXi Embedded ISO image](http://www.dell.com/support/article/us/en/04/sln288152/how-to-download-the-dell-customized-esxi-embedded-iso-image?lang=en)
+
+[Install ESXi from USB on Bare Metal PowerEdge Server](https://thebackroomtech.com/2017/09/26/install-esxi-usb-bare-metal-poweredge-server/)
+
+[Configuring boot sequence to ESXi](http://www.dell.com/support/manuals/us/en/04/vmware-esxi-6.x/esxiiigpub-v1/configuring-boot-sequence-to-esxi?guid=guid-a768043c-c2db-4a93-b57b-41739240a3f6&lang=en-us)
