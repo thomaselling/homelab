@@ -1,8 +1,9 @@
 # homelab - scripts
 
 ## deploy.ps1
+New-Item and New-VM Current license or ESXi version prohibits execution of the requested operation
 ```powershell
-Test-Connection -Server testserver -Username testuser -Password testpass
+Test-Connection -Uploadpath C:\temp\ubuntu-16.04.3-desktop-amd64.iso -Targetfolder ISOs -Datastore fuzz -Server testserver -Username testuser -Password testpass 
 ```
 
 # homelab - resources and configuration
@@ -46,3 +47,5 @@ Updating through lifecycle controller with f10 on startup. FTP server -> ftp.del
 [Install ESXi from USB on Bare Metal PowerEdge Server](https://thebackroomtech.com/2017/09/26/install-esxi-usb-bare-metal-poweredge-server/)
 
 [Configuring boot sequence to ESXi](http://www.dell.com/support/manuals/us/en/04/vmware-esxi-6.x/esxiiigpub-v1/configuring-boot-sequence-to-esxi?guid=guid-a768043c-c2db-4a93-b57b-41739240a3f6&lang=en-us)
+
+[VMware vSphere PowerCLI 6.5.4](https://code.vmware.com/doc/preview?id=5975#/doc/index-all_cmdlets.html)

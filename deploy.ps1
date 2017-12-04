@@ -13,7 +13,19 @@ Function Test-Connection
 
         [Parameter(Mandatory = $true,
         HelpMessage = 'Esxi server to connect to.')]
-        [string]$Server
+        [string]$Server,
+
+        [Parameter(Mandatory = $false,
+        HelpMessage = 'Local path to iso.')]
+        [string]$Uploadpath,
+
+        [Parameter(Mandatory = $false,
+        HelpMessage = 'Target folder for iso on esxi server.')]
+        [string]$Targetfolder,
+
+        [Parameter(Mandatory = $false,
+        HelpMessage = 'Target datastore on esxi server.')]
+        [string]$Datastore
 
     )
 
@@ -26,10 +38,7 @@ Function Test-Connection
             Write-Host "VMware.PowerCLI module does not exist. Install it."
             exit
         }
-    }
 
-    Process
-    {
         # Connect to server
         try {
             Connect-VIServer -Server $Server -Protocol https -User $Username -Password $Password
@@ -37,9 +46,28 @@ Function Test-Connection
             $ErrorMessage = $_.Exception.Message
             Write-Host $ErrorMessage
         }
+    }
 
-        Get-VM
-        Get-Inventory
+    Process
+    {
+
+        # Upload ISO
+        $tempds = Get-VMHost -Name $Server | Get-Datastore $Datastore | Select -ExpandProperty DatastoreBrowserPath
+        New-PSDrive -Root "$tempds\" -Name tempds -PSProvider VimDatastore > $null
+
+        if (!(Test-Path -Path "$tempds\$($Targetfolder)")) {
+            New-Item -ItemType Directory -Path "$tempds\$($Targetfolder)" > $null
+        }
+
+        Copy-DatastoreItem -Item $Uploadpath -Destination "$tempds\$($Targetfolder)"
+        Remove-PSDrive -Name tempds -Confirm:$false
+
+        # Create VM
+        New-VM -Name test -VMHost $Server -Datastore $Datastore -DiskGB 25 -MemoryGB 8 -NumCpu 2 -NetworkName "VM Network" -Location test
+        $isopath = Split-Path $Uploadpath -leaf
+
+        # Assign iso to cd drive
+        New-CDDrive -VM test -IsoPath "$tempds\$($Targetfolder)\$($isopath)"
 
     }
 
