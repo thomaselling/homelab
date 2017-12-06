@@ -1,5 +1,8 @@
 # homelab - scripts
 
+## setup.sh
+[syzkaller setup script](https://github.com/google/syzkaller/blob/master/docs/linux/setup_ubuntu-host_qemu-vm_x86-64-kernel.md)
+
 ## deploy.ps1
 New-Item and New-VM Current license or ESXi version prohibits execution of the requested operation
 ```powershell
