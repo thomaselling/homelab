@@ -1,6 +1,9 @@
 # homelab - scripts
 
-## setup.sh
+## afl-setup.sh
+[afl setup script](https://www.evilsocket.net/2015/04/30/fuzzing-with-afl-fuzz-a-practical-example-afl-vs-binutils/)
+
+## syz-setup.sh
 [syzkaller setup script](https://github.com/google/syzkaller/blob/master/docs/linux/setup_ubuntu-host_qemu-vm_x86-64-kernel.md)
 
 ## deploy.ps1

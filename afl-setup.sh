@@ -1,6 +1,7 @@
 #!/bin/bash -x
 # https://www.evilsocket.net/2015/04/30/fuzzing-with-afl-fuzz-a-practical-example-afl-vs-binutils/
-# afl setup and tutorial
+# quick and dirty afl setup script
+# Ubuntu 16.04 LTS
 
 sudo apt-get install texinfo bison flex
 wget http://lcamtuf.coredump.cx/afl/releases/afl-latest.tgz
@@ -15,6 +16,8 @@ cd binutils*
 CC=afl-gcc ./configure
 make
 
+# this will fail, run as root
+# sudo -i
 echo core > /proc/sys/kernel/core_pattern
 
 mkdir afl_in afl_out
